@@ -23,7 +23,7 @@
                     "C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um",
                     "C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared",
                     "C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/winrt",
-                    "${workspaceRoot}/deps/SDL2-2.0.12/include"
+                    "${workspaceFolder}/deps/SDL2-2.0.12/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
