@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "echoCommand": true,
+    "tasks": [
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/MDd",
+                "/W4",
+                "/EHsc",
+                "/ZI",
+                "/Fe:${workspaceFolder}/Debug/main.exe",
+                "/Fd:${workspaceFolder}/Debug/",
+                "/Fo:${workspaceFolder}/Debug/",
+                "${file}"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "compile",
+            "command": "cmd",
+            "type": "process",
+            "args": [
+                "/C %vcvarsall% && cl /Od /Zi /EHsc /Fd:%outpath%/vc142.pdb /Fo:%outpath%/%TargetName%.obj %srcfile% /link /OUT:%outpath%/%TargetName%.%TargetExt% /PDB:%outpath%/%TargetName%.pdb"
+            ],
+            "group": "build"
+        }
+    ],
+    "options": {
+        "env": {
+            "outpath": "build", // must exist before running
+            "TargetName": "main",
+            "TargetExt": "exe",
+            "vcvarsall": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat\" x64",
+            "srcfile": "{workspaceFolder}\\src\\main.cpp"
+            // "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvars64.batk"\"
+        }
+    }
+}

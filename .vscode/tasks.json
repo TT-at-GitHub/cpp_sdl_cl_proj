@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "echoCommand": true,
+    "tasks": [
+        {
+            "label": "build",
+            "type": "process",
+            "command": "cmd",
+            "args": [
+                "/C",
+                "${workspaceFolder}\\scripts\\shell & ${workspaceFolder}\\scripts\\build",
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "${workspaceFolder}\\scripts\\clean",
+            "args": [],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "none"
+        }
+    ]
+}

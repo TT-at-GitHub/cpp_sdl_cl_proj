@@ -1,6 +1,7 @@
 # User speciffic
 deps/
 bin/
+# .vscode/
 
 # Prerequisites
 *.d
@@ -34,7 +35,6 @@ bin/
 *.exe
 *.out
 *.app
-.vscode/
 
 
 *_i.c
