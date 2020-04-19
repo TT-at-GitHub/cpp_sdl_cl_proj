@@ -5,7 +5,7 @@ set objDir=.\obj\
 
 if exist %buildDir% (
     pushd %buildDir%
-    del /q /s *.exe *.pdb *.ilk *.dll
+    del /q /s *.exe *.pdb *.ilk *.dll *.obj
     rd /s /q %objDir%
     rd /s /q .vs
     popd
